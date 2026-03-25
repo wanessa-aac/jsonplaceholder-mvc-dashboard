@@ -66,7 +66,7 @@ JSONPLACEHOLDER-MVC-DASHBOARD/
 │   └── components.py        # Componentes visuais da interface
 │
 ├── app.py                   # Ponto de entrada da aplicação
-├── requirement.txt          # Dependências do projeto
+├── requirements.txt          # Dependências do projeto
 ├── .gitignore
 ├── LICENSE
 └── README.md
@@ -86,7 +86,7 @@ JSONPLACEHOLDER-MVC-DASHBOARD/
 **1. Clone o repositório**
 ```bash
 git clone https://github.com/wanessa-aac/jsonplaceholder-mvc-dashboard.git
-cd JSONPLACEHOLDER-MVC-DASHBOARD
+cd JSONPLACEHOLDER-MVC-DASHBOARDj
 ```
 
 **2. Crie e ative um ambiente virtual**
@@ -103,7 +103,7 @@ source venv/bin/activate
 
 **3. Instale as dependências**
 ```bash
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 **4. Execute a aplicação**
