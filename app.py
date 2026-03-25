@@ -28,9 +28,12 @@ def buscar_usuarios():
 # Buscar posts
 # -----------------------------
 @st.cache_data(ttl=60)
-def buscar_posts():
+def buscar_posts(user_id=None):
     try:
-        response = requests.get(f"{BASE_URL}/posts", timeout=5)
+        params = {}
+        if user_id is not None:
+            params["userId"] = user_id
+        response = requests.get(f"{BASE_URL}/posts", params=params, timeout=5)
         response.raise_for_status()
         return response.json()
     except Exception:
@@ -52,7 +55,6 @@ def buscar_comentarios(post_id):
 
 
 usuarios = buscar_usuarios()
-posts = buscar_posts()
 
 # -----------------------------
 # Sidebar usuários
@@ -71,9 +73,9 @@ user_id = usuarios_dict[usuario_selecionado]
 st.header(f"Postagens de {usuario_selecionado}")
 
 # -----------------------------
-# Filtrar posts por usuário
+# Buscar posts do usuário selecionado
 # -----------------------------
-posts_usuario = [p for p in posts if p["userId"] == user_id]
+posts_usuario = buscar_posts(user_id=user_id)
 
 for post in posts_usuario:
 
