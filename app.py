@@ -61,6 +61,11 @@ usuarios = buscar_usuarios()
 # -----------------------------
 st.sidebar.header("Colaboradores")
 
+# Se não houver usuários, exibe aviso e interrompe a execução
+if not usuarios:
+    st.sidebar.warning("Nenhum usuário encontrado. Tente novamente mais tarde.")
+    st.stop()
+
 usuarios_dict = {u["name"]: u["id"] for u in usuarios}
 
 usuario_selecionado = st.sidebar.selectbox(
