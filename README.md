@@ -1,5 +1,8 @@
 # 📊 JSONPLACEHOLDER-MVC-DASHBOARD
 
+[![Python](https://img.shields.io/badge/Python-3.13-blue)](https://www.python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-brightred)](https://streamlit.io)
+
 Dashboard de Comunicação Interna para centralizar postagens, comentários e perfis de usuários, construído como protótipo com arquitetura **MVC** consumindo a API pública [JSONPlaceholder](https://jsonplaceholder.typicode.com).
 
 ---
@@ -149,7 +152,8 @@ O sistema é resiliente a falhas de rede através das seguintes estratégias:
 
 Desenvolvido por:
 
-- **Wanessa Costa**
-- **Ryan Cassimiro**
+- [Wanessa Costa](https://github.com/wanessa-aac)
+- [Ryan Cassimiro](https://github.com/RyanGCassimiro)
+
 
 Projeto acadêmico — protótipo de Dashboard de Comunicação Interna com arquitetura MVC e integração RESTful.
